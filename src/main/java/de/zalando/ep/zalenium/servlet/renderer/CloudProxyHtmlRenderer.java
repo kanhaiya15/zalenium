@@ -2,6 +2,7 @@ package de.zalando.ep.zalenium.servlet.renderer;
 
 import de.zalando.ep.zalenium.proxy.BrowserStackRemoteProxy;
 import de.zalando.ep.zalenium.proxy.CBTRemoteProxy;
+import de.zalando.ep.zalenium.proxy.LambdaTestRemoteProxy;
 import de.zalando.ep.zalenium.proxy.SauceLabsRemoteProxy;
 import de.zalando.ep.zalenium.proxy.TestingBotRemoteProxy;
 import de.zalando.ep.zalenium.util.Environment;
@@ -102,6 +103,9 @@ public class CloudProxyHtmlRenderer implements HtmlRenderer {
         }
         if (proxy instanceof CBTRemoteProxy) {
             icon = contextPath + "/grid/resources/images/cbt.png";
+        }
+        if (proxy instanceof LambdaTestRemoteProxy) {
+            icon = contextPath + "/grid/resources/images/lambdatest.png";
         }
         String slotClass = "";
         String slotTitle;
