@@ -93,7 +93,7 @@ public class LambdaTestRemoteProxyTest {
   @After
   public void tearDown() throws MalformedObjectNameException {
     ObjectName objectName = new ObjectName(
-        "org.seleniumhq.grid:type=RemoteProxy,node=\"http://hub.lambdatest.com:80\"");
+        "org.seleniumhq.grid:type=RemoteProxy,node=\"https://hub.lambdatest.com\"");
     new JMXHelper().unregister(objectName);
     objectName = new ObjectName("org.seleniumhq.grid:type=RemoteProxy,node=\"http://localhost:30000\"");
     new JMXHelper().unregister(objectName);
@@ -190,10 +190,10 @@ public class LambdaTestRemoteProxyTest {
       TestInformation testInformation = lambdaTestSpyProxy.getTestInformation(mockSeleniumSessionId);
       Assert.assertEquals("loadZalandoPageAndCheckTitle", testInformation.getTestName());
       Assert.assertThat(testInformation.getFileName(),
-          CoreMatchers.containsString("lambdatest_loadZalandoPageAndCheckTitle_chrome_win10"));
-      Assert.assertEquals("chrome 67.0, win10", testInformation.getBrowserAndPlatform());
-      Assert.assertEquals("https://automation.lambdatest.com/public/video?testID=ZVRUI-72B5S-OKGNO-1VXVS",
-          testInformation.getVideoUrl());  
+          CoreMatchers.containsString("lambdatest_loadZalandoPageAndCheckTitle_chrome_windows"));
+      Assert.assertEquals("chrome 67.0, windows", testInformation.getBrowserAndPlatform());
+      Assert.assertEquals("https://d15x9hjibri3lt.cloudfront.net/ZVRUI-72B5S-OKGNO-1VXVS/video.mp4",
+          testInformation.getVideoUrl());
     } finally {
       LambdaTestRemoteProxy.restoreCommonProxyUtilities();
     }

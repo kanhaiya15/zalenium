@@ -91,7 +91,9 @@ hub:
   testingBotEnabled: false
   testingBotKey: blank
   testingBotSecret: blank
-
+  lambdaTestEnabled: false
+  lambdaUsername: blank
+  lambdaAccessKey: blank
   ## Arbitrary environment variables
   env: 
     # FOO: BAR

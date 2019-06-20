@@ -2,9 +2,9 @@ package de.zalando.ep.zalenium.servlet.renderer;
 
 import de.zalando.ep.zalenium.proxy.BrowserStackRemoteProxy;
 import de.zalando.ep.zalenium.proxy.CBTRemoteProxy;
-import de.zalando.ep.zalenium.proxy.LambdaTestRemoteProxy;
 import de.zalando.ep.zalenium.proxy.SauceLabsRemoteProxy;
 import de.zalando.ep.zalenium.proxy.TestingBotRemoteProxy;
+import de.zalando.ep.zalenium.proxy.LambdaTestRemoteProxy;
 import de.zalando.ep.zalenium.util.Environment;
 
 import org.openqa.grid.common.exception.GridException;
